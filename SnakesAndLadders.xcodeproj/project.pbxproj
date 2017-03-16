@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1BA005611E7A558000711537 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA005601E7A558000711537 /* main.m */; };
+		1BA005691E7B1ED400711537 /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA005681E7B1ED400711537 /* Dice.m */; };
+		1BA0056D1E7B203D00711537 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA0056C1E7B203D00711537 /* InputHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		1BA0055D1E7A558000711537 /* SnakesAndLadders */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SnakesAndLadders; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA005601E7A558000711537 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1BA005671E7B1ED400711537 /* Dice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dice.h; sourceTree = "<group>"; };
+		1BA005681E7B1ED400711537 /* Dice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dice.m; sourceTree = "<group>"; };
+		1BA0056B1E7B203D00711537 /* InputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
+		1BA0056C1E7B203D00711537 /* InputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +64,20 @@
 			isa = PBXGroup;
 			children = (
 				1BA005601E7A558000711537 /* main.m */,
+				1BA005671E7B1ED400711537 /* Dice.h */,
+				1BA005681E7B1ED400711537 /* Dice.m */,
+				1BA0056A1E7B202A00711537 /* Handlers */,
 			);
 			path = SnakesAndLadders;
+			sourceTree = "<group>";
+		};
+		1BA0056A1E7B202A00711537 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				1BA0056B1E7B203D00711537 /* InputHandler.h */,
+				1BA0056C1E7B203D00711537 /* InputHandler.m */,
+			);
+			name = Handlers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BA005691E7B1ED400711537 /* Dice.m in Sources */,
+				1BA0056D1E7B203D00711537 /* InputHandler.m in Sources */,
 				1BA005611E7A558000711537 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

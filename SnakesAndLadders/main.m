@@ -7,11 +7,26 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "InputHandler.h"
+#import "Dice.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        // Instantiate dice.
+        Dice *dice = [[Dice alloc] init];
+        
+        while (YES) {
+            
+            // Roll dice when user types roll.
+            NSString *inputString = [InputHandler inputForPrompt:@"Type 'roll' or 'r' to roll dice."];
+            
+            if ([inputString isEqualToString:@"roll"] || [inputString isEqualToString: @"r"]) {
+                // roll dice
+                NSLog(@"You've rolled %d", [dice rollDice]);
+            }
+            
+        }
     }
     return 0;
 }
