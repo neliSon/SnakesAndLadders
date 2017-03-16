@@ -31,6 +31,7 @@
                        @95 : @73,
                        @99 : @78
                        };
+        _gameOver = NO;
     }
     return self;
 }
@@ -43,24 +44,29 @@
 -(void)moveToSquare:(int)diceValue {
     self.currentSquare += diceValue;
     NSLog(@"You've landed on square: %d", self.currentSquare);
-//    for (NSNumber *key in self.gameLogic) {
-//        if (self.currentSquare == [key intValue]) {
-//            self.currentSquare = [[self.gameLogic objectForKey:key] intValue];
-//        }
-//    }
-    [self.gameLogic enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-        if (self.currentSquare == [key intValue]) {
-            int newSquare = [[self.gameLogic objectForKey:key] intValue];
-            
-            // Report ladder or snake.
-            if (newSquare > self.currentSquare) {
-                NSLog(@"You climbed on a ladder from %d to %d", self.currentSquare, newSquare);
-            } else {
-                NSLog(@"You slid down a snake from %d to %d", self.currentSquare, newSquare);
+    
+    // if our dice value takes us to 100, or past 100, we win.
+    if (self.currentSquare >= 100) {
+        self.gameOver = YES;
+        NSLog(@"You win!");
+        
+    } else {
+        
+        // if we land on a special square, we move to new square.
+        [self.gameLogic enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+            if (self.currentSquare == [key intValue]) {
+                int newSquare = [[self.gameLogic objectForKey:key] intValue];
+                
+                // Report ladder or snake.
+                if (newSquare > self.currentSquare) {
+                    NSLog(@"You climbed on a ladder from %d to %d", self.currentSquare, newSquare);
+                } else {
+                    NSLog(@"You slid down a snake from %d to %d", self.currentSquare, newSquare);
+                }
+                self.currentSquare = newSquare;
             }
-            self.currentSquare = newSquare;
-        }
-    }];
+        }];
+    }
 }
 
 @end

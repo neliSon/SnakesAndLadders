@@ -15,7 +15,7 @@ int main(int argc, const char * argv[]) {
         
         Player *player = [[Player alloc] init];
         
-        while (YES) {
+        while (!player.gameOver) {
             
             // Roll dice when user types roll.
             NSString *inputString = [InputHandler inputForPrompt:@"Type 'roll' or 'r' to roll dice."];
