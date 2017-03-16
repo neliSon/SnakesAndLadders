@@ -12,7 +12,8 @@
 @interface Player : NSObject
 
 @property (nonatomic, strong) Dice *dice;
+@property (nonatomic, assign) int currentSquare;
 
--(int)rollDice;
+-(void)rollAndMove;
 
 @end

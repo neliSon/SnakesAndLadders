@@ -14,13 +14,19 @@
 {
     self = [super init];
     if (self) {
+        _currentSquare = 0;
         _dice = [[Dice alloc] init];
     }
     return self;
 }
 
--(int)rollDice {
-    return [self.dice roll];
+-(void)rollAndMove {
+    int diceValue = [self.dice roll];
+    [self moveToSquare:diceValue];
+}
+
+-(void)moveToSquare:(int)diceValue {
+    self.currentSquare += diceValue;
 }
 
 @end

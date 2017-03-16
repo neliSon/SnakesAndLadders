@@ -22,7 +22,9 @@ int main(int argc, const char * argv[]) {
             
             if ([inputString isEqualToString:@"roll"] || [inputString isEqualToString: @"r"]) {
                 // roll dice
-                NSLog(@"You've rolled %d", [player rollDice]);
+                [player rollAndMove];
+                NSLog(@"You've rolled %d", player.dice.diceValue);
+                NSLog(@"You've landed on square: %d", player.currentSquare);
             }
             
         }
