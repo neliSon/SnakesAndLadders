@@ -10,9 +10,9 @@
 
 @implementation Dice
 
--(int)roll {
+-(void)roll {
     self.diceValue = 1 + arc4random_uniform(6);
-    return self.diceValue;
+    NSLog(@"You've rolled %d", self.diceValue);
 }
 
 @end

@@ -36,12 +36,31 @@
 }
 
 -(void)rollAndMove {
-    int diceValue = [self.dice roll];
-    [self moveToSquare:diceValue];
+    [self.dice roll];
+    [self moveToSquare:self.dice.diceValue];
 }
 
 -(void)moveToSquare:(int)diceValue {
     self.currentSquare += diceValue;
+    NSLog(@"You've landed on square: %d", self.currentSquare);
+//    for (NSNumber *key in self.gameLogic) {
+//        if (self.currentSquare == [key intValue]) {
+//            self.currentSquare = [[self.gameLogic objectForKey:key] intValue];
+//        }
+//    }
+    [self.gameLogic enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        if (self.currentSquare == [key intValue]) {
+            int newSquare = [[self.gameLogic objectForKey:key] intValue];
+            
+            // Report ladder or snake.
+            if (newSquare > self.currentSquare) {
+                NSLog(@"You climbed on a ladder from %d to %d", self.currentSquare, newSquare);
+            } else {
+                NSLog(@"You slid down a snake from %d to %d", self.currentSquare, newSquare);
+            }
+            self.currentSquare = newSquare;
+        }
+    }];
 }
 
 @end

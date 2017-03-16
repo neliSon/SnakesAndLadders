@@ -12,6 +12,6 @@
 
 @property (nonatomic, assign) int diceValue;
 
--(int)roll;
+-(void)roll;
 
 @end
