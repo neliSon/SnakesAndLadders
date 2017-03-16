@@ -1,5 +1,5 @@
 //
-//  Dice.h
+//  Player.h
 //  SnakesAndLadders
 //
 //  Created by Nelson Chow on 2017-03-16.
@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Dice.h"
 
-@interface Dice : NSObject
+@interface Player : NSObject
 
-@property (nonatomic, assign) int diceValue;
+@property (nonatomic, strong) Dice *dice;
 
--(int)roll;
+-(int)rollDice;
 
 @end

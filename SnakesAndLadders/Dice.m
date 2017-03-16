@@ -10,8 +10,9 @@
 
 @implementation Dice
 
--(int)rollDice {
-    return 1 + arc4random_uniform(6);
+-(int)roll {
+    self.diceValue = 1 + arc4random_uniform(6);
+    return self.diceValue;
 }
 
 @end

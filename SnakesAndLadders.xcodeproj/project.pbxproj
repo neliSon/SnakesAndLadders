@@ -10,6 +10,7 @@
 		1BA005611E7A558000711537 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA005601E7A558000711537 /* main.m */; };
 		1BA005691E7B1ED400711537 /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA005681E7B1ED400711537 /* Dice.m */; };
 		1BA0056D1E7B203D00711537 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA0056C1E7B203D00711537 /* InputHandler.m */; };
+		1BA005711E7B235E00711537 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA005701E7B235E00711537 /* Player.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		1BA005681E7B1ED400711537 /* Dice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dice.m; sourceTree = "<group>"; };
 		1BA0056B1E7B203D00711537 /* InputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
 		1BA0056C1E7B203D00711537 /* InputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
+		1BA0056F1E7B235E00711537 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		1BA005701E7B235E00711537 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				1BA005601E7A558000711537 /* main.m */,
-				1BA005671E7B1ED400711537 /* Dice.h */,
-				1BA005681E7B1ED400711537 /* Dice.m */,
+				1BA0056E1E7B229000711537 /* Models */,
 				1BA0056A1E7B202A00711537 /* Handlers */,
 			);
 			path = SnakesAndLadders;
@@ -78,6 +80,17 @@
 				1BA0056C1E7B203D00711537 /* InputHandler.m */,
 			);
 			name = Handlers;
+			sourceTree = "<group>";
+		};
+		1BA0056E1E7B229000711537 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1BA005671E7B1ED400711537 /* Dice.h */,
+				1BA005681E7B1ED400711537 /* Dice.m */,
+				1BA0056F1E7B235E00711537 /* Player.h */,
+				1BA005701E7B235E00711537 /* Player.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BA005711E7B235E00711537 /* Player.m in Sources */,
 				1BA005691E7B1ED400711537 /* Dice.m in Sources */,
 				1BA0056D1E7B203D00711537 /* InputHandler.m in Sources */,
 				1BA005611E7A558000711537 /* main.m in Sources */,

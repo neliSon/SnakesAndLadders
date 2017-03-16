@@ -8,13 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "InputHandler.h"
-#import "Dice.h"
+#import "Player.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        // Instantiate dice.
-        Dice *dice = [[Dice alloc] init];
+        Player *player = [[Player alloc] init];
         
         while (YES) {
             
@@ -23,7 +22,7 @@ int main(int argc, const char * argv[]) {
             
             if ([inputString isEqualToString:@"roll"] || [inputString isEqualToString: @"r"]) {
                 // roll dice
-                NSLog(@"You've rolled %d", [dice rollDice]);
+                NSLog(@"You've rolled %d", [player rollDice]);
             }
             
         }
