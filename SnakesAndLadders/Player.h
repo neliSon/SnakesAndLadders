@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) Dice *dice;
 @property (nonatomic, assign) int currentSquare;
+@property (nonatomic, strong) NSDictionary *gameLogic;
 
 -(void)rollAndMove;
 

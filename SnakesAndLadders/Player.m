@@ -16,6 +16,21 @@
     if (self) {
         _currentSquare = 0;
         _dice = [[Dice alloc] init];
+        _gameLogic = @{ // Ladders:
+                       @4 : @14,
+                       @9 : @31,
+                       @20 : @38,
+                       @28 : @84,
+                       @40 : @59,
+                       @51 : @67,
+                       @63 : @81,
+                       // Snakes:
+                       @17 : @7,
+                       @64 : @60,
+                       @89 : @26,
+                       @95 : @73,
+                       @99 : @78
+                       };
     }
     return self;
 }
