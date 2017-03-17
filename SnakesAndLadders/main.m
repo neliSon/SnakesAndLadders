@@ -8,21 +8,25 @@
 
 #import <Foundation/Foundation.h>
 #import "InputHandler.h"
-#import "Player.h"
+#import "PlayerManager.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        Player *player = [[Player alloc] initWithName:@"Lucky"];
+        PlayerManager *playerManager = [[PlayerManager alloc] init];
         
-        while (!player.gameOver) {
+        NSString *numberOfPlayers = [InputHandler inputForPrompt:@"Enter the number of players who wish to play."];
+        [playerManager createPlayers:[numberOfPlayers intValue]];
+        
+        while (YES) {
             
             // Roll dice when user types roll.
             NSString *inputString = [InputHandler inputForPrompt:@"Type 'roll' or 'r' to roll dice."];
             
             if ([inputString isEqualToString:@"roll"] || [inputString isEqualToString: @"r"]) {
                 // roll dice
-                [player rollAndMove];
+                NSLog(@"Rolled");
+//                [player rollAndMove];
             }
             
         }

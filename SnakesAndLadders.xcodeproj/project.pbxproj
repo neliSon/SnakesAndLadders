@@ -11,6 +11,7 @@
 		1BA005691E7B1ED400711537 /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA005681E7B1ED400711537 /* Dice.m */; };
 		1BA0056D1E7B203D00711537 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA0056C1E7B203D00711537 /* InputHandler.m */; };
 		1BA005711E7B235E00711537 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA005701E7B235E00711537 /* Player.m */; };
+		1BA005741E7B7FE700711537 /* PlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA005731E7B7FE700711537 /* PlayerManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		1BA0056C1E7B203D00711537 /* InputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
 		1BA0056F1E7B235E00711537 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		1BA005701E7B235E00711537 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		1BA005721E7B7FE700711537 /* PlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerManager.h; sourceTree = "<group>"; };
+		1BA005731E7B7FE700711537 /* PlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				1BA005681E7B1ED400711537 /* Dice.m */,
 				1BA0056F1E7B235E00711537 /* Player.h */,
 				1BA005701E7B235E00711537 /* Player.m */,
+				1BA005721E7B7FE700711537 /* PlayerManager.h */,
+				1BA005731E7B7FE700711537 /* PlayerManager.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BA005741E7B7FE700711537 /* PlayerManager.m in Sources */,
 				1BA005711E7B235E00711537 /* Player.m in Sources */,
 				1BA005691E7B1ED400711537 /* Dice.m in Sources */,
 				1BA0056D1E7B203D00711537 /* InputHandler.m in Sources */,

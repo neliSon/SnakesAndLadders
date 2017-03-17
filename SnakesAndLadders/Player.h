@@ -17,7 +17,6 @@
 @property (nonatomic, strong) NSDictionary *gameLogic;
 @property (nonatomic, assign) BOOL gameOver;
 
--(instancetype)initWithName:(NSString *)name;
 -(void)rollAndMove;
 
 @end
