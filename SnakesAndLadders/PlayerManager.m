@@ -14,6 +14,8 @@
 {
     self = [super init];
     if (self) {
+        _currentIndex = 0;
+        _gameOver = NO;
         _players = [NSMutableArray array];
     }
     return self;
@@ -25,6 +27,19 @@
         player.name = [NSString stringWithFormat:@"Player%d", i];
         [self.players addObject:player];
     }
+}
+
+-(void)rollForPlayer{
+    [self.currentPlayer rollAndMove];
+    if (self.currentPlayer.won) {
+        self.gameOver =  YES;
+    } else {
+        self.currentIndex += 1;
+    }
+}
+
+-(Player *)currentPlayer {
+    return self.players[self.currentIndex % self.players.count];
 }
 
 @end

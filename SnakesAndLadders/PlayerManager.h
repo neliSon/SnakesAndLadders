@@ -12,7 +12,11 @@
 @interface PlayerManager : NSObject
 
 @property (nonatomic, strong) NSMutableArray *players;
+@property (nonatomic, assign) NSInteger currentIndex;
+@property (nonatomic, assign) BOOL gameOver;
 
 -(void)createPlayers:(int)numberOfPlayers;
+-(void)rollForPlayer;
+-(Player *)currentPlayer;
 
 @end

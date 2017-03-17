@@ -31,7 +31,7 @@
                        @95 : @73,
                        @99 : @78
                        };
-        _gameOver = NO;
+        _won = NO;
     }
     return self;
 }
@@ -43,12 +43,12 @@
 
 -(void)moveToSquare:(int)diceValue {
     self.currentSquare += diceValue;
-    NSLog(@"You've landed on square: %d", self.currentSquare);
+    NSLog(@"%@ landed on square: %d", self.name, self.currentSquare);
     
     // if our dice value takes us to 100, or past 100, we win.
     if (self.currentSquare >= 100) {
-        self.gameOver = YES;
-        NSLog(@"You win!");
+        self.won = YES;
+        NSLog(@"%@ wins!", self.name);
         
     } else {
         
@@ -59,9 +59,9 @@
                 
                 // Report ladder or snake.
                 if (newSquare > self.currentSquare) {
-                    NSLog(@"You climbed on a ladder from %d to %d", self.currentSquare, newSquare);
+                    NSLog(@"%@ climbed on a ladder from %d to %d", self.name, self.currentSquare, newSquare);
                 } else {
-                    NSLog(@"You slid down a snake from %d to %d", self.currentSquare, newSquare);
+                    NSLog(@"%@ slid down a snake from %d to %d", self.name, self.currentSquare, newSquare);
                 }
                 self.currentSquare = newSquare;
             }

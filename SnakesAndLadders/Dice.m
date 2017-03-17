@@ -12,7 +12,7 @@
 
 -(void)roll {
     self.diceValue = 1 + arc4random_uniform(6);
-    NSLog(@"You've rolled %d", self.diceValue);
+    NSLog(@"Rolled %d", self.diceValue);
 }
 
 @end
