@@ -10,10 +10,11 @@
 
 @implementation Player
 
-- (instancetype)init
+- (instancetype)initWithName:(NSString *)name
 {
     self = [super init];
     if (self) {
+        _name = name;
         _currentSquare = 0;
         _dice = [[Dice alloc] init];
         _gameLogic = @{ // Ladders:

@@ -13,7 +13,7 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        Player *player = [[Player alloc] init];
+        Player *player = [[Player alloc] initWithName:@"Lucky"];
         
         while (!player.gameOver) {
             
