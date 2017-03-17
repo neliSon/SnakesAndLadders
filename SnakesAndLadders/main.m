@@ -15,9 +15,13 @@ int main(int argc, const char * argv[]) {
         
         PlayerManager *playerManager = [[PlayerManager alloc] init];
         
-        NSString *numberOfPlayers = [InputHandler inputForPrompt:@"Enter the number of players who wish to play."];
-        [playerManager createPlayers:[numberOfPlayers intValue]];
+        // Choose number of players.
+        while (playerManager.players.count == 0) {
+            NSString *numberOfPlayers = [InputHandler inputForPrompt:@"Enter the number of players who wish to play."];
+            [playerManager createPlayers:[numberOfPlayers intValue]];
+        }
         
+        // Game loop.
         while (YES) {
             
             // Roll dice when user types roll.
